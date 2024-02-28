@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AboutMe from './AboutMe'
 import Header from './Header'
+import Services from './Services'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>
         <Header/>
         <AboutMe/>
+        <Services/>
       </div>
     </>
   )
