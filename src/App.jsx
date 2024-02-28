@@ -5,6 +5,7 @@ import './App.css'
 import AboutMe from './AboutMe'
 import Header from './Header'
 import Services from './Services'
+import MyWork from './MyWork'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header/>
         <AboutMe/>
         <Services/>
+        <MyWork/>
       </div>
     </>
   )

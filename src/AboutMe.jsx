@@ -10,7 +10,7 @@ export default function AboutMe() {
     }
 
     return(
-        <div className={styles.container}>
+        <div>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
                 <img style={{flexBasis:"30%"}} src="http://placekitten.com/200/200"/>
                 <div style={{flexBasis:"65%",border: "5px solid black"}}>

@@ -1,6 +1,5 @@
 import { Apple, Code, Crop } from "@mui/icons-material";
 import styles from "./Services.module.css"
-import { red } from "@mui/material/colors";
 
 export default function Services() {
     return(
