@@ -1,0 +1,53 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contactLeft{
+    flex-basis: 35%;
+}
+
+.contactRight{
+    flex-basis: 60%;
+}
+
+.contactRight form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    max-width: initial;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.contactLeft p{
+    margin-top: 30px;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0;
+}
+
+.btn{
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+}

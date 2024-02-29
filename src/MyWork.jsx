@@ -2,7 +2,7 @@ import styles from "./MyWork.module.css"
 
 export default function MyWork() {
     return(
-        <div>
+        <div className={styles.body}>
             <h1>My Work</h1>
             <div className={styles.workList}>
                 <div className={styles.work}>
