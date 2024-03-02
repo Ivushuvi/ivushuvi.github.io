@@ -16,7 +16,7 @@ const iconSx = {
 
 export default function Contact(){
     return(
-        <div>
+        <div id="Contact">
             <div className={styles.row}>
                 <div className={styles.contactLeft}>
                     <h1>Contact Me</h1>

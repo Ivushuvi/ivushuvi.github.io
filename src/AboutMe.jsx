@@ -1,19 +1,53 @@
 import { Tabs, Tab, Box, Button } from "@mui/material";
 import { useRef, useState } from "react";
 import styles from "./AboutMe.module.css"
+import { Parallax, useParallax } from "react-scroll-parallax";
 
 export default function AboutMe() {
     const [tabval,setTabval] = useState(0);
+    const [isOrigin, setIsOrigin] = useState(true);
+
+    const target = useRef();
+    
+    const leftRef = useRef();
+    const rightRef = useRef();
 
     const handleChange = (newValue) => {
         setTabval(newValue);
     }
 
+    const parallax = useParallax({
+        onProgressChange: (progress) => {
+            if(parallax.ref.current){
+                if(progress < 0.5){
+                    if (progress <= 0.3){
+                        parallax.ref.current.style.setProperty("--progress",progress/0.3);
+                        parallax.ref.current.style.setProperty("scale",(progress/3.0)+0.9);
+                    }
+                    if(!isOrigin){
+                        leftRef.current.style.setProperty("transform",`translateX(0)`);
+                        rightRef.current.style.setProperty("transform",`translateX(0)`);
+                        setIsOrigin(true);
+                    }
+                }else{
+                    parallax.ref.current.style.setProperty("--progress",(1-progress)/0.5);
+                    leftRef.current.style.setProperty("transform",`translateX(${((progress-0.5)/0.5)*-50}vw)`);
+                    rightRef.current.style.setProperty("transform",`translateX(${((progress-0.5)/0.5)*50}vw)`);
+
+                    if(isOrigin){
+                        setIsOrigin(false);
+                    }
+                }
+            }
+        },
+        targetElement: target.current,
+    });
+
     return(
-        <div>
-            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                <img style={{flexBasis:"30%"}} src="http://placekitten.com/200/200"/>
-                <div style={{flexBasis:"65%",border: "5px solid black"}}>
+        <div className={styles.container}>
+            <div ref={parallax.ref} className={styles.content}>
+                <img ref={leftRef} style={{flexBasis:"30%"}} src="http://placekitten.com/200/200"/>
+                <div ref={rightRef} style={{flexBasis:"65%",border: "5px solid black"}}>
                     <h3>
                         About me
                     </h3>
@@ -29,9 +63,9 @@ export default function AboutMe() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quia itaque, neque iure laborum et beatae molestiae corrupti recusandae quod ratione obcaecati totam at velit dolorem perspiciatis adipisci asperiores dolor!
                     </p>
                     <div className={styles.tabTitles}>
-                        <p className={`${styles.tabLinks} ${tabval==0 && styles.activeLink}`} onClick={(e) => handleChange(0)}>Skills</p>
-                        <p className={`${styles.tabLinks} ${tabval==1 && styles.activeLink}`} onClick={(e) => handleChange(1)}>Experience</p>
-                        <p className={`${styles.tabLinks} ${tabval==2 && styles.activeLink}`} onClick={(e) => handleChange(2)}>Education</p>
+                        <p className={`${styles.tabLinks} ${tabval==0 && styles.activeLink}`} onClick={() => handleChange(0)}>Skills</p>
+                        <p className={`${styles.tabLinks} ${tabval==1 && styles.activeLink}`} onClick={() => handleChange(1)}>Experience</p>
+                        <p className={`${styles.tabLinks} ${tabval==2 && styles.activeLink}`} onClick={() => handleChange(2)}>Education</p>
                     </div>
                     <div className={`${styles.tabContents} ${tabval==0 && styles.activeTab}`}>
                         <ul>
@@ -64,6 +98,7 @@ export default function AboutMe() {
                     
                 </div>
             </div>
+            <div className={styles.filler} ref={target}/>
         </div>
     )
 }

@@ -1,3 +1,7 @@
+:root {
+    --progress: 0;
+}
+
 ul {
     padding: 0;
 }
@@ -46,4 +50,34 @@ ul {
 
 .tabContents.activeTab{
     display: block;
+}
+
+.parallax{
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    opacity: var(--progress);
+}
+
+.filler{
+    flex-grow: 1;
 }

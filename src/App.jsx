@@ -7,17 +7,20 @@ import Header from './Header'
 import Services from './Services'
 import MyWork from './MyWork'
 import Contact from './Contact'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 function App() {
   return (
     <>
-      <div>
-        <Header/>
-        <AboutMe/>
-        <Services/>
-        <MyWork/>
-        <Contact/>
-      </div>
+      <ParallaxProvider>
+        <div>
+          <Header/>
+          <AboutMe/>
+          <Services/>
+          <MyWork/>
+          <Contact/>
+        </div>
+      </ParallaxProvider>
     </>
   )
 }

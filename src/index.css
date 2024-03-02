@@ -49,6 +49,9 @@ button {
 button:hover {
   border-color: #646cff;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
