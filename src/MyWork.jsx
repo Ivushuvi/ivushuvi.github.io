@@ -1,7 +1,10 @@
+import { useState } from "react"
 import MoreWorK from "./MoreWork"
 import styles from "./MyWork.module.css"
 
 export default function MyWork() {
+    const [showMore,setShowMore] = useState(false);
+
     return(
         <div className={styles.body}>
             <h1>My Work</h1>
@@ -28,8 +31,10 @@ export default function MyWork() {
                     </div>
                 </div>
             </div>
-            <a href="#" className={styles.btn}>See more</a>
-            <MoreWorK/>
+            <div style={{display: showMore ? "block" : "none"}}>
+                <MoreWorK/>
+            </div>
+            <button onClick={()=>setShowMore(!showMore)} className={styles.btn}>{showMore ? "Close" : "See more"}</button>
         </div>
     )
 }
