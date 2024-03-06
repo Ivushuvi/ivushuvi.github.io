@@ -1,3 +1,4 @@
+import MoreWorK from "./MoreWork"
 import styles from "./MyWork.module.css"
 
 export default function MyWork() {
@@ -28,6 +29,7 @@ export default function MyWork() {
                 </div>
             </div>
             <a href="#" className={styles.btn}>See more</a>
+            <MoreWorK/>
         </div>
     )
 }

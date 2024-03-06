@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    border: solid 5px white;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    border: solid 5px red;
+}
+
+.right{
+    flex-basis: 60%;
+    border: solid 5px yellow;
+    display: flex;
+    flex-direction: column;
+}
