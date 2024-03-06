@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styles from "./ImageSlider.module.css";
-import { ArrowBack, ArrowForward, Forward } from "@mui/icons-material";
+import {Circle, Forward } from "@mui/icons-material";
 
 export default function ImageSlider({images}){
+
+    const iconSx = {stroke:"white",fill:"black",fontSize:"40px"};
     
     const [imgInd,setImgInd] = useState(0);
 
@@ -22,8 +24,14 @@ export default function ImageSlider({images}){
             <div style={{height:"100%",width:"100%",display: "flex", translate: `-${imgInd*100}%`, transition: "translate 0.5s"}}>
                 {images.map((item,index) => <img style={{height:"100%",minWidth:"100%",maxWidth:"100%",objectFit:"contain",backgroundColor:"white"}} src={item} key={index}/>)}
             </div>
-            <button className={styles.imgButton} style={{left:0}} onClick={()=>leftImage()}><Forward sx={{stroke:"white",fill:"black",fontSize:"40px",scale:"-1"}}/></button>
-            <button className={styles.imgButton} style={{right:0}} onClick={()=>rightImage()}><Forward sx={{stroke:"white",fill:"black",fontSize:"40px"}}/></button>
+            <button className={`${styles.imgButton} ${styles.left}`} style={{left:0}} onClick={()=>leftImage()}><Forward sx={{...iconSx,scale:"-1 1"}}/></button>
+            <button className={`${styles.imgButton} ${styles.right}`} style={{right:0}} onClick={()=>rightImage()}><Forward sx={iconSx}/></button>
+            <div className={styles.dotNavigate}>
+                {images.map((item,index) =>
+                    <button className={styles.dotButton} key={index} onClick={()=>setImgInd(index)}>
+                        {index==imgInd ? <Circle sx={{color:"grey",stroke:"black"}}/> : <Circle sx={{color:"lightgrey",stroke:"black"}}/>}
+                    </button>)}
+            </div>
         </div>
     )
 }
