@@ -5,7 +5,7 @@
     margin-top: 50px;
 }
 
-.tabTitles div {
+.tabTitles div div{
     background: #262626;
     font-size: 13px;
     font-weight: 300;
@@ -15,19 +15,20 @@
     padding: 20px 0px;
 }
 
-.tabTitles div h2{
+.tabTitles div div h2{
     font-size: 30px;
     font-weight: 500;
     padding: 0;
     margin: 0;
 }
 
-.tabTitles div:hover{
+.tabTitles div div:hover{
     background: #ff004f;
     transform: translateY(-10px);
 }
 
 .content{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +42,7 @@
     height: 200vh;
     display: flex;
     flex-direction: column;
+    
 }
 
 .tabContents{
