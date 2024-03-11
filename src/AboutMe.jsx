@@ -1,20 +1,14 @@
-import { Tabs, Tab, Box, Button } from "@mui/material";
 import { useRef, useState } from "react";
 import styles from "./AboutMe.module.css"
-import { Parallax, useParallax } from "react-scroll-parallax";
+import { useParallax } from "react-scroll-parallax";
 
 export default function AboutMe() {
-    const [tabval,setTabval] = useState(0);
     const [isOrigin, setIsOrigin] = useState(true);
 
     const target = useRef();
     
     const leftRef = useRef();
     const rightRef = useRef();
-
-    const handleChange = (newValue) => {
-        setTabval(newValue);
-    }
 
     const parallax = useParallax({
         onProgressChange: (progress) => {
@@ -61,41 +55,7 @@ export default function AboutMe() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nostrum in corporis a adipisci pariatur repellendus, hic repellat id! Id ipsam distinctio sapiente nihil ducimus cum quia incidunt veniam quas.
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam voluptas mollitia aperiam cum. Ut, possimus dicta aut id soluta iusto officia assumenda ipsum dolorem quae esse ab nulla quisquam nisi.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quia itaque, neque iure laborum et beatae molestiae corrupti recusandae quod ratione obcaecati totam at velit dolorem perspiciatis adipisci asperiores dolor!
-                    </p>
-                    <div className={styles.tabTitles}>
-                        <p className={`${styles.tabLinks} ${tabval==0 && styles.activeLink}`} onClick={() => handleChange(0)}>Skills</p>
-                        <p className={`${styles.tabLinks} ${tabval==1 && styles.activeLink}`} onClick={() => handleChange(1)}>Experience</p>
-                        <p className={`${styles.tabLinks} ${tabval==2 && styles.activeLink}`} onClick={() => handleChange(2)}>Education</p>
-                    </div>
-                    <div className={`${styles.tabContents} ${tabval==0 && styles.activeTab}`}>
-                        <ul>
-                            <li><span>TitleA</span><br/>Description</li>
-                            <li><span>TitleB</span><br/>Description</li>
-                            <li><span>TitleC</span><br/>Description</li>
-                        </ul>
-                    </div>
-                    <div className={`${styles.tabContents} ${tabval==1 && styles.activeTab}`}>
-                        <ul>
-                            <li><span>TitleD</span><br/>Description</li>
-                            <li><span>TitleE</span><br/>Description</li>
-                            <li><span>TitleF</span><br/>Description</li>
-                        </ul>
-                    </div>
-                    <div className={`${styles.tabContents} ${tabval==2 && styles.activeTab}`}>
-                        <ul>
-                            <li><span>TitleG</span><br/>Description</li>
-                            <li><span>TitleH</span><br/>Description</li>
-                            <li><span>TitleI</span><br/>Description</li>
-                        </ul>
-                    </div>
-                    {/* <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
-                        <Tabs value={value} onChange={handleChange}>
-                            <Tab className={styles["tabs"]} label="Item One"/>
-                            <Tab label="Item Two"/>
-                            <Tab label="Item Three"/>
-                        </Tabs>
-                    </Box> */}
-                    
+                    </p>                    
                 </div>
             </div>
             <div className={styles.filler} ref={target}/>

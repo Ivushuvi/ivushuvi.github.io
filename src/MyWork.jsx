@@ -1,9 +1,17 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import MoreWorK from "./MoreWork"
 import styles from "./MyWork.module.css"
 
 export default function MyWork() {
     const [showMore,setShowMore] = useState(false);
+
+    const ref = useRef();
+
+    useEffect(() => {
+        if(showMore){
+            ref.current.scrollIntoView({behavior:"smooth", block:"center",inline:"nearest"});
+        }
+    },[showMore]);
 
     return(
         <div className={styles.body}>
@@ -31,7 +39,7 @@ export default function MyWork() {
                     </div>
                 </div>
             </div>
-            <div style={{display: showMore ? "block" : "none"}}>
+            <div ref={ref} style={{display: showMore ? "block" : "none"}}>
                 <MoreWorK/>
             </div>
             <button onClick={()=>setShowMore(!showMore)} className={styles.btn}>{showMore ? "Close" : "See more"}</button>

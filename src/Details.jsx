@@ -1,9 +1,9 @@
 import { Apple, Code, Crop } from "@mui/icons-material";
-import styles from "./Services.module.css"
+import styles from "./Details.module.css"
 import { useRef, useState } from "react";
 import { Parallax, useParallax } from "react-scroll-parallax";
 
-export default function Services() {
+export default function Details() {
 
     const [tabval,setTabval] = useState(0);
 
@@ -31,7 +31,6 @@ export default function Services() {
     return(
         <div>
             <div className={styles.content}>
-                <h1>My services</h1>
                 <div className={styles.tabTitles}>
                     <div ref={parallax.ref} style={{translate:"0 -400%"}}>
                         <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
@@ -51,19 +50,22 @@ export default function Services() {
                 </div>
                 <div className={styles.tabContents}>
                     <ul className={`${styles.tab} ${tabval==0 && styles.activeTab}`}>
-                        <li><h3>TitleA</h3>Description</li>
-                        <li><h3>TitleB</h3>Description</li>
-                        <li><h3>TitleC</h3>Description</li>
+                        <li><h3>Java</h3>Object-Oriented Progamming concepts are understood and applied. </li>
+                        <li><h3>MERN stack</h3>SPA development</li>
+                        <li><h3>JavaScript</h3>Used in addition to the MERN stack</li>
+                        <li><h3>SQL</h3>Querying using SQL</li>
+                        <li><h3>Python</h3>Used socket programming and PyQt to make a simple messaging app.<br/>Also delved into regression and classification machine learning.</li>
+                        <li><h3>C</h3>Basic understanding of memory allocation.</li>
+                        <li><h3>Linux Bash</h3>Created a bash script that functions as a spelling game</li>
                     </ul>
                     <ul className={`${styles.tab} ${tabval==1 && styles.activeTab}`}>
-                        <li><h3>TitleD</h3>Description</li>
-                        <li><h3>TitleE</h3>Description</li>
-                        <li><h3>TitleF</h3>Description</li>
+                        <li><h3>Front of House | Ajisen Ramen Restaurant | Feb 2022 - Nov 2022</h3>Front-of-house position that involved greeting customers and seating them, taking their 
+orders, delivering food and water to tables and ensure that it was a clean environment</li>
+                        <li><h3>Software Developer Intern | Unleashed Software | Nov 2022 - Feb 2023</h3>Engaged in Agile scrum methodogy, involving daily stand ups, sprint planning, and sprint reviews.
+                        Understood the importances of good git practice, with proper naming conventions and branching strategies. Jira tickets were used to assign tasks, resulting in usages of ReactJS to make front-end changes</li>
                     </ul>
                     <ul className={`${styles.tab} ${tabval==2 && styles.activeTab}`}>
-                        <li><h3>TitleG</h3>Description</li>
-                        <li><h3>TitleH</h3>Description</li>
-                        <li><h3>TitleI</h3>Description</li>
+                        <li><h3>Bachelor of Engineering (Honours) | University of Auckland | Mar 2020 - Nov 2023</h3></li>
                     </ul>
                 </div>
             </div>

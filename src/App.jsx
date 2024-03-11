@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AboutMe from './AboutMe'
 import Header from './Header'
-import Services from './Services'
+import Details from './Details'
 import MyWork from './MyWork'
 import Contact from './Contact'
 import { ParallaxProvider } from 'react-scroll-parallax'
@@ -12,11 +12,11 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 function App() {
   return (
     <>
+      <Header/>
       <ParallaxProvider>
-        <div>
-          <Header/>
+        <div id="body">
           <AboutMe/>
-          <Services/>
+          <Details/>
           <MyWork/>
           <Contact/>
         </div>
