@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-form input, form textarea{
+.container form input, form textarea{
     width: 100%;
     max-width: initial;
     border: 0;
@@ -33,7 +33,7 @@ form input, form textarea{
     margin-top: 30px;
 }
 
-h1{
+.container h1{
     font-size: 60px;
     font-weight: 600;
     color: #fff;

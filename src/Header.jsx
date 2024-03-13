@@ -2,22 +2,24 @@ import styles from "./Header.module.css";
 
 export default function Header(){
     return(
-        <div className={styles.header}>
-            <div>
-                <nav>
-                    <img src="http://placekitten.com/200/100"/>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                    </ul>
-                </nav>
+        <div className={styles.header} id="home">
+            <div className={styles.headerText}>
+                <h1 style={{color:"black",fontSize:"70px"}}>
+                    Hi, I am <span>Drason</span>
+                </h1>
+                <div style={{backgroundColor:"white",display:"inline-block"}}>
+                    <p>Quick Navigation</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#details">Details</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <h1>
-                Hi, I am <span>Shuvi</span>.
-            </h1>
         </div>
     )
 }

@@ -16,17 +16,14 @@ const iconSx = {
 
 export default function Contact(){
     return(
-        <div id="Contact">
+        <div id="contact" className={styles.container}>
             <div className={styles.row}>
                 <div className={styles.contactLeft}>
                     <h1>Contact Me</h1>
-                    <p><Send sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>contact@example.com</p>
-                    <p><Phone sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>0123456789</p>
+                    <p><Send sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>drason2015@gmail.com</p>
+                    <p><Phone sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>+64 2108535620</p>
                     <div>
-                        <a href=""><Facebook sx={iconSx}/></a>
-                        <a href=""><X sx={iconSx}/></a>
-                        <a href=""><Instagram sx={iconSx}/></a>
-                        <a href=""><LinkedIn sx={iconSx}/></a>
+                        <a href="https://www.linkedin.com/in/drason-guo-aa811b224/"><LinkedIn sx={iconSx}/></a>
                     </div>
                     <a href="src/assets/SoftwareCV.pdf" download className={styles.btn}>Download CV</a>
                 </div>

@@ -14,7 +14,7 @@ export default function MyWork() {
     },[showMore]);
 
     return(
-        <div className={styles.body}>
+        <div className={styles.body} id="portfolio">
             <h1>My Work</h1>
             <div className={styles.workList}>
                 <div className={styles.work}>
