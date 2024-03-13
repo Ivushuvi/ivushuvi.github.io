@@ -7,7 +7,7 @@ export default function MoreWorK(){
 
     const projects = [
         {name:"RhythmWalker",
-        url:["/src/assets/projects/rhythmwalker/1.jpg","/src/assets/projects/rhythmwalker/2.jpg","/src/assets/projects/rhythmwalker/3.jpg","/src/assets/projects/rhythmwalker/4.jpg","/src/assets/projects/rhythmwalker/5.jpg","/src/assets/projects/rhythmwalker/6.jpg","/src/assets/projects/rhythmwalker/7.jpg","/src/assets/projects/rhythmwalker/8.jpg","/src/assets/projects/rhythmwalker/9.jpg"],
+        url:["/assets/projects/rhythmwalker/1.jpg","/assets/projects/rhythmwalker/2.jpg","/assets/projects/rhythmwalker/3.jpg","/assets/projects/rhythmwalker/4.jpg","/assets/projects/rhythmwalker/5.jpg","/assets/projects/rhythmwalker/6.jpg","/assets/projects/rhythmwalker/7.jpg","/assets/projects/rhythmwalker/8.jpg","/assets/projects/rhythmwalker/9.jpg"],
         description:"Developed using Unity3D game engine.\n\nAn AR mobile exercise game where the aim is to synchronize one's"
         +" footsteps with the beat of the music. After each walking session, the game goes into AR where the user can play fetch"
         +" with a virtual dog, or feed it different qualities of food depending on the score achieved.\n\nThe game takes inspiration"
@@ -18,7 +18,7 @@ export default function MoreWorK(){
         +"\n- walking with music\n- walking with music AND gameplay"
         +"\nIt was found that that enjoyment, effort, and step count were all significantly increased when gameplay was introduced."},
         {name:"Kēmu Kupu",
-        url:["/src/assets/projects/kemukupu/1.png","/src/assets/projects/kemukupu/2.png","/src/assets/projects/kemukupu/3.png","/src/assets/projects/kemukupu/4.png","/src/assets/projects/kemukupu/5.png","/src/assets/projects/kemukupu/6.png","/src/assets/projects/kemukupu/7.png"],
+        url:["/assets/projects/kemukupu/1.png","/assets/projects/kemukupu/2.png","/assets/projects/kemukupu/3.png","/assets/projects/kemukupu/4.png","/assets/projects/kemukupu/5.png","/assets/projects/kemukupu/6.png","/assets/projects/kemukupu/7.png"],
         description:"Developed using JavaFX and SceneBuilder."
         +"\n\nA spelling app designed for learning te reo Māori. It allows young adults to improve their knowledge of the Māori language"
         +" by quizzing on Māori word spellings as well as showing their respective English meanings."
@@ -30,7 +30,7 @@ export default function MoreWorK(){
         +" they produced. This score is also responsible for the achievements and statistics feature."
         +"\n\nThe \"Practice\" module operates similarly, however it is endless and does not contribute to the scoring system."},
         {name:"Hackathon",
-        url:["/src/assets/projects/hack-a-thon/1.png","/src/assets/projects/hack-a-thon/2.png","/src/assets/projects/hack-a-thon/3.png","/src/assets/projects/hack-a-thon/4.png","/src/assets/projects/hack-a-thon/5.png","/src/assets/projects/hack-a-thon/6.png","/src/assets/projects/hack-a-thon/7.png","/src/assets/projects/hack-a-thon/8.png"],
+        url:["/assets/projects/hack-a-thon/1.png","/assets/projects/hack-a-thon/2.png","/assets/projects/hack-a-thon/3.png","/assets/projects/hack-a-thon/4.png","/assets/projects/hack-a-thon/5.png","/assets/projects/hack-a-thon/6.png","/assets/projects/hack-a-thon/7.png","/assets/projects/hack-a-thon/8.png"],
         description:"Developed using React JS, with Google Firebase as the backend. Routing is achieved on client-side using React Router."
         +"\n\nA non-deployed web app where users can register as hosts, such that they can host hackathon events, or sign up as a participant who can register for these hosted events, as well"
         +" as submitting their hackathon projects."
@@ -43,7 +43,7 @@ export default function MoreWorK(){
         +" Here, the user can register for the event, and when approved by the host, the user can instead submit their project. Registration and submission forms that require an attachment contain an upload button where the user can search for a file locally"
         +" to submit. This file gets uploaded into our Firebase database, which allows hosts to download from."},
         {name:"YS Tech",
-        url:["/src/assets/projects/ystech/1.jpg","/src/assets/projects/ystech/2.jpg","/src/assets/projects/ystech/3.jpg"],
+        url:["/assets/projects/ystech/1.jpg","/assets/projects/ystech/2.jpg","/assets/projects/ystech/3.jpg"],
         description:"Developed using Java in Android Studio, with Google Firebase as the backend."
         +"\n\nThis android mobile app allows users to browse and search through listings of PC peripherals, where they can view the details, specifications, as well as external links"
         +" that directs the user to a store that sells the product. The listings are stored on Google Firebase, and each time a product is clicked on, the view count is updated in the database."

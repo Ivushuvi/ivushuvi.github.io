@@ -18,21 +18,21 @@ export default function MyWork() {
             <h1>My Work</h1>
             <div className={styles.workList}>
                 <div className={styles.work}>
-                    <img src="src\assets\projects\rhythmwalker\5.jpg"/>
+                    <img src="\assets\projects\rhythmwalker\5.jpg"/>
                     <div className={styles.layer}>
                         <h3>RhythmWalker</h3>
                         <p>An AR mobile exergame, where you walk to the beat of the music.</p>
                     </div>
                 </div>
                 <div className={styles.work}>
-                    <img src="src\assets\projects\kemukupu\display.png"/>
+                    <img src="\assets\projects\kemukupu\display.png"/>
                     <div className={styles.layer}>
                         <h3>Kēmu Kupu</h3>
                         <p>A te reo Māori spelling game.</p>
                     </div>
                 </div>
                 <div className={styles.work}>
-                    <img src="src\assets\projects\hack-a-thon\display.png"/>
+                    <img src="\assets\projects\hack-a-thon\display.png"/>
                     <div className={styles.layer}>
                         <h3>Hackathon Web App</h3>
                         <p>A web app for people to either host hackathon events, or participate in them.</p>

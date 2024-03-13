@@ -82,7 +82,7 @@ orders, delivering food and water to tables and ensure that it was a clean envir
                     <li>
                         <h3>Bachelor of Engineering (Honours) | University of Auckland | Mar 2020 - Nov 2023</h3>
                         <p> - Cumulative GPA: ~7.6/9.0</p>
-                        <a href="src/assets/Academic transcript.pdf" download className={styles.btn}>Download Academic Transcript</a>
+                        <a href="/assets/Academic transcript.pdf" download className={styles.btn}>Download Academic Transcript</a>
                     </li>
                 </ul>
             </div>
