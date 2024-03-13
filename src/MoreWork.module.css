@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    height: 50vh;
+    border: solid 2px grey;
+    border-radius: 6px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    border-right: solid 5px white;
+}
+
+.right{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container p{
+    white-space: pre-wrap;
+}
+
+.btn{
+    font-size: 36px;
+    display: block;
+    border: 1px solid black;
+    padding: 14px 50px;
+    border-radius: 0px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
