@@ -40,7 +40,7 @@ export default function AboutMe() {
     return(
         <div className={styles.container}>
             <div ref={parallax.ref} className={styles.content}>
-                <img ref={leftRef} style={{flexBasis:"30%",borderRadius:"50%",width:"30%"}} src="src/assets/dp.jpg"/>
+                <img ref={leftRef} style={{flexBasis:"30%",borderRadius:"50%",width:"30%"}} src="/assets/dp.jpg"/>
                 <div ref={rightRef} style={{flexBasis:"65%"}}>
                     <h3>
                         About me

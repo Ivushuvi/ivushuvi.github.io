@@ -25,7 +25,7 @@ export default function Contact(){
                     <div>
                         <a href="https://www.linkedin.com/in/drason-guo-aa811b224/"><LinkedIn sx={iconSx}/></a>
                     </div>
-                    <a href="src/assets/SoftwareCV.pdf" download className={styles.btn}>Download CV</a>
+                    <a href="/assets/SoftwareCV.pdf" download className={styles.btn}>Download CV</a>
                 </div>
                 <div className={styles.contactRight}>
                     <form>
