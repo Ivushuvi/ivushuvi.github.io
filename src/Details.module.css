@@ -49,6 +49,7 @@
 .tabContents{
     width: 40%;
     align-self: center;
+    height: 100%;
 }
 
 .tab{

@@ -1,4 +1,4 @@
-import { Apple, Code, Crop } from "@mui/icons-material";
+import { Apple, Code, Crop, Handyman, School, WorkHistory } from "@mui/icons-material";
 import styles from "./Details.module.css"
 import { useRef, useState } from "react";
 import { Parallax, useParallax } from "react-scroll-parallax";
@@ -11,6 +11,11 @@ export default function Details() {
         setTabval(newValue);
     }
 
+    const parallax2 = useRef();
+    const parallax3 = useRef();
+
+    const target = useRef();
+
     const parallax = useParallax({
         onProgressChange: (progress) => {
             if(parallax.ref.current){
@@ -20,30 +25,33 @@ export default function Details() {
                     parallax3.current.style.setProperty("translate",`0 -${200*((0.7-progress)/0.7)}%`);
                 }else{
                     parallax.ref.current.style.setProperty("translate",`0 0`);
+                    parallax2.current.style.setProperty("translate",`0 0`);
+                    parallax3.current.style.setProperty("translate",`0 0`);
                 }
             }
-        }
+        },
+        targetElement: target.current
     });
 
-    const parallax2 = useRef();
-    const parallax3 = useRef();
+    const sxProps = {marginRight:"10px",fontSize:"40px",verticalAlign: "middle",color:"pink"};
 
     return(
         <div className={styles.content} id="details">
+            <div ref={target}/>
             <div className={styles.tabTitles}>
                 <div ref={parallax.ref} style={{translate:"0 -400%"}}>
                     <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
-                        <h2>Skills</h2>
+                        <h2><Handyman sx={sxProps}/>Skills</h2>
                     </div>
                 </div>
                 <div ref={parallax2} style={{translate:"0 -300%"}}>
                     <div style={tabval==1 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(1)}>
-                        <h2>Experience</h2>
+                        <h2><WorkHistory sx={sxProps}/>Experience</h2>
                     </div>
                 </div>
                 <div ref={parallax3} style={{translate:"0 -200%"}}>
                     <div style={tabval==2 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(2)}>
-                        <h2>Education</h2>
+                        <h2><School sx={sxProps}/>Education</h2>
                     </div>
                 </div>
             </div>
