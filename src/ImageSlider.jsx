@@ -22,7 +22,7 @@ export default function ImageSlider({images}){
     return(
         <div style={{height:"100%",width:"100%",position:"relative",overflow:"hidden"}}>
             <div style={{height:"100%",width:"100%",display: "flex", translate: `-${imgInd*100}%`, transition: "translate 0.5s"}}>
-                {images.map((item,index) => <img style={{height:"100%",minWidth:"100%",maxWidth:"100%",objectFit:"contain",backgroundColor:"white"}} src={item} key={index}/>)}
+                {images.map((item,index) => <img style={{height:"100%",minWidth:"100%",maxWidth:"100%",objectFit:"contain",backgroundColor:"#626d71"}} src={item} key={index}/>)}
             </div>
             <button className={`${styles.imgButton} ${styles.left}`} style={{left:0}} onClick={()=>leftImage()}><Forward sx={{...iconSx,scale:"-1 1"}}/></button>
             <button className={`${styles.imgButton} ${styles.right}`} style={{right:0}} onClick={()=>rightImage()}><Forward sx={iconSx}/></button>

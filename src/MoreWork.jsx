@@ -32,7 +32,7 @@ export default function MoreWorK(){
         {name:"Hackathon",
         url:["/src/assets/projects/hack-a-thon/1.png","/src/assets/projects/hack-a-thon/2.png","/src/assets/projects/hack-a-thon/3.png","/src/assets/projects/hack-a-thon/4.png","/src/assets/projects/hack-a-thon/5.png","/src/assets/projects/hack-a-thon/6.png","/src/assets/projects/hack-a-thon/7.png","/src/assets/projects/hack-a-thon/8.png"],
         description:"Developed using React JS, with Google Firebase as the backend. Routing is achieved on client-side using React Router."
-        +"\n\nA web app where users can register as hosts, such that they can host hackathon events, or sign up as a participant who can register for these hosted events, as well"
+        +"\n\nA non-deployed web app where users can register as hosts, such that they can host hackathon events, or sign up as a participant who can register for these hosted events, as well"
         +" as submitting their hackathon projects."
         +"\n\nOnboarding and sign-in authentication is achieved through Firebase's authentication system. As a host, you are able to create new events by providing a relevant tag and the neccesary details, such as description, start and end dates, etc."
         +" You can also design the registration and submission forms which participants must fill, which can include questions and required attachments. You can also view a list of your hosted events, where clicking on one will bring"
@@ -56,7 +56,7 @@ export default function MoreWorK(){
     return(
         <div className={styles.container}>
             <div className={styles.left}>
-                {projects.map((item,index) => <button key={index} onClick={()=>setProjectNo(index)}>{item.name}</button>)}
+                {projects.map((item,index) => <button style={{backgroundColor: projectNo==index ? "#444444" : null}} className={styles.btn} key={index} onClick={()=>setProjectNo(index)}>{item.name}</button>)}
             </div>
             <div className={styles.right}>
                 <div style={{height:"50%"}}>

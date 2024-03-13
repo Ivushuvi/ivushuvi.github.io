@@ -18,28 +18,28 @@ export default function MyWork() {
             <h1>My Work</h1>
             <div className={styles.workList}>
                 <div className={styles.work}>
-                    <img src="https://placekitten.com/500/800"/>
+                    <img src="src\assets\projects\rhythmwalker\5.jpg"/>
                     <div className={styles.layer}>
-                        <h3>Social Media App</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h3>RhythmWalker</h3>
+                        <p>An AR mobile exergame, where you walk to the beat of the music.</p>
                     </div>
                 </div>
                 <div className={styles.work}>
-                    <img src="https://placekitten.com/500/800"/>
+                    <img src="src\assets\projects\kemukupu\display.png"/>
                     <div className={styles.layer}>
-                        <h3>Music App</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h3>Kēmu Kupu</h3>
+                        <p>A te reo Māori spelling game.</p>
                     </div>
                 </div>
                 <div className={styles.work}>
-                    <img src="https://placekitten.com/500/800"/>
+                    <img src="src\assets\projects\hack-a-thon\display.png"/>
                     <div className={styles.layer}>
-                        <h3>Online Shopping App</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h3>Hackathon Web App</h3>
+                        <p>A web app for people to either host hackathon events, or participate in them.</p>
                     </div>
                 </div>
             </div>
-            <div ref={ref} style={{display: showMore ? "block" : "none"}}>
+            <div ref={ref} style={{display: showMore ? "block" : "none", marginTop: "50px"}}>
                 <MoreWorK/>
             </div>
             <button onClick={()=>setShowMore(!showMore)} className={styles.btn}>{showMore ? "Close" : "See more"}</button>

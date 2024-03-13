@@ -21,15 +21,6 @@
     animation: squishLeft 200ms ease-in-out;
 }
 
-.imgContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-width: 100%;
-    border: solid 5px yellow;
-    flex: 1 1 auto
-}
-
 .dotNavigate{
     position: absolute;
     bottom: 1rem;
