@@ -23,7 +23,7 @@ export default function Contact(){
                     <p><Send sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>drason2015@gmail.com</p>
                     <p><Phone sx={{color: "#ff004f",marginRight: "15px",fontSize: "25px"}}/>+64 2108535620</p>
                     <div>
-                        <a href="https://www.linkedin.com/in/drason-guo-aa811b224/"><LinkedIn sx={iconSx}/></a>
+                        <a href="https://www.linkedin.com/in/drason-guo-aa811b224/" target="_blank"><LinkedIn sx={iconSx}/></a>
                     </div>
                     <a href="/assets/SoftwareCV.pdf" download className={styles.btn}>Download CV</a>
                 </div>
