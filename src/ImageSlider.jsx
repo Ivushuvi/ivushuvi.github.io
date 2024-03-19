@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ImageSlider.module.css";
 import {Circle, Forward } from "@mui/icons-material";
 
@@ -18,6 +18,10 @@ export default function ImageSlider({images}){
         if(imgInd == images.length-1) return setImgInd(0);
         return setImgInd(imgInd+1);
     }
+
+    useEffect(()=>{
+        setImgInd(0);
+    },[images]);
     
     return(
         <div style={{height:"100%",width:"100%",position:"relative",overflow:"hidden"}}>

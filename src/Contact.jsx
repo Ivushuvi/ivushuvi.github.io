@@ -1,5 +1,6 @@
 import { Facebook, Instagram, LinkedIn, Phone, Send, X } from "@mui/icons-material";
 import styles from "./Contact.module.css";
+import { useRef } from "react";
 
 const iconSx = {
     textDecoration:"none",
@@ -15,6 +16,32 @@ const iconSx = {
 };
 
 export default function Contact(){
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy_BVFs2oWpt9SsxBK--xRv0W8541YH5JWJ95Icspj5TZqutdGTAe_Mpikw_4RaNmX/exec'
+
+    const successMsg = useRef();
+    const errorMsg = useRef();
+    const submitBtn = useRef();
+    const loader = useRef();
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        submitBtn.current.style.setProperty("display","none");
+        loader.current.style.setProperty("display","block");
+        fetch(scriptURL, { method: 'POST', body: new FormData(e.target)})
+            .then(handleSuccess)
+            .catch(handleError)
+    }
+
+    const handleSuccess = () => {
+        loader.current.style.setProperty("display","none");
+        successMsg.current.style.setProperty("display","block");
+    }
+
+    const handleError = () => {
+        loader.current.style.setProperty("display","none");
+        errorMsg.current.style.setProperty("display","block");
+    }
+
     return(
         <div id="contact" className={styles.container}>
             <div className={styles.row}>
@@ -28,11 +55,14 @@ export default function Contact(){
                     <a href="/assets/SoftwareCV.pdf" download className={styles.btn}>Download CV</a>
                 </div>
                 <div className={styles.contactRight}>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <input type="text" name="Name" placeholder="Your Name" required/>
-                        <input type="email" name="email" placeholder="Your Email" required/>
+                        <input type="email" name="Email" placeholder="Your Email" required/>
                         <textarea name="Message" rows="6" placeholder="Your Message"/>
-                        <button className={styles.btn} type="submit">Submit</button>
+                        <button ref={submitBtn} className={styles.btn} type="submit">Submit</button>
+                        <div ref={loader} className={styles.loader}/>
+                        <span ref={successMsg} className={styles.success}>Message successfully sent!</span>
+                        <span ref={errorMsg} className={styles.error}>An error occured!</span>
                     </form>
                 </div>
             </div>
