@@ -58,7 +58,7 @@ export default function Contact(){
                     <form onSubmit={handleSubmit}>
                         <input type="text" name="Name" placeholder="Your Name" required/>
                         <input type="email" name="Email" placeholder="Your Email" required/>
-                        <textarea name="Message" rows="6" placeholder="Your Message"/>
+                        <textarea name="Message" rows="6" placeholder="Your Message" style={{resize:"none"}}/>
                         <button ref={submitBtn} className={styles.btn} type="submit">Submit</button>
                         <div ref={loader} className={styles.loader}/>
                         <span ref={successMsg} className={styles.success}>Message successfully sent!</span>
