@@ -20,9 +20,9 @@ export default function Details() {
         onProgressChange: (progress) => {
             if(parallax.ref.current){
                 if(progress < 0.7){
-                    parallax.ref.current.style.setProperty("translate",`0 -${400*((0.7-progress)/0.7)}%`);
-                    parallax2.current.style.setProperty("translate",`0 -${300*((0.7-progress)/0.7)}%`);
-                    parallax3.current.style.setProperty("translate",`0 -${200*((0.7-progress)/0.7)}%`);
+                    parallax.ref.current.style.setProperty("translate",`0 -${30*((0.7-progress)/0.7)}vh`);
+                    parallax2.current.style.setProperty("translate",`0 -${20*((0.7-progress)/0.7)}vh`);
+                    parallax3.current.style.setProperty("translate",`0 -${10*((0.7-progress)/0.7)}vh`);
                 }else{
                     parallax.ref.current.style.setProperty("translate",`0 0`);
                     parallax2.current.style.setProperty("translate",`0 0`);
@@ -39,17 +39,17 @@ export default function Details() {
         <div className={styles.content} id="details">
             <div ref={target}/>
             <div className={styles.tabTitles}>
-                <div ref={parallax.ref} style={{translate:"0 -400%"}}>
+                <div ref={parallax.ref} style={{translate:"0 -30vh"}}>
                     <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
                         <h2><Handyman sx={sxProps}/>Skills</h2>
                     </div>
                 </div>
-                <div ref={parallax2} style={{translate:"0 -300%"}}>
+                <div ref={parallax2} style={{translate:"0 -20vh"}}>
                     <div style={tabval==1 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(1)}>
                         <h2><WorkHistory sx={sxProps}/>Experience</h2>
                     </div>
                 </div>
-                <div ref={parallax3} style={{translate:"0 -200%"}}>
+                <div ref={parallax3} style={{translate:"0 -10vh"}}>
                     <div style={tabval==2 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(2)}>
                         <h2><School sx={sxProps}/>Education</h2>
                     </div>
