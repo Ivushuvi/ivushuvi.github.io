@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    height: 50vh;
+    height: 800px;
     border: solid 2px grey;
     border-radius: 6px;
 }
