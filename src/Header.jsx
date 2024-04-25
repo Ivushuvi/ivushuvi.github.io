@@ -4,7 +4,7 @@ export default function Header(){
     return(
         <div className={styles.header} id="home">
             <div className={styles.headerText}>
-                <h1 style={{color:"black",fontSize:"70px"}}>
+                <h1 style={{color:"black"}}>
                     Hi, I am <span>Drason</span>
                 </h1>
                 <div style={{backgroundColor:"white",display:"inline-block"}}>

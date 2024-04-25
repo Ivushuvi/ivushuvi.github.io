@@ -38,20 +38,41 @@ export default function Details() {
     return(
         <div className={styles.content} id="details">
             <div ref={target}/>
-            <div className={styles.tabTitles}>
-                <div ref={parallax.ref} style={{translate:"0 -30vh"}}>
-                    <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
-                        <h2><Handyman sx={sxProps}/>Skills</h2>
+            <div className={styles.par}>
+                <div className={styles.tabTitles}>
+                    <div ref={parallax.ref} style={{translate:"0 -30vh"}}>
+                        <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
+                            <h2><Handyman sx={sxProps}/><span>Skills</span></h2>
+                        </div>
+                    </div>
+                    <div ref={parallax2} style={{translate:"0 -20vh"}}>
+                        <div style={tabval==1 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(1)}>
+                            <h2><WorkHistory sx={sxProps}/><span>Experience</span></h2>
+                        </div>
+                    </div>
+                    <div ref={parallax3} style={{translate:"0 -10vh"}}>
+                        <div style={tabval==2 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(2)}>
+                            <h2><School sx={sxProps}/><span>Education</span></h2>
+                        </div>
                     </div>
                 </div>
-                <div ref={parallax2} style={{translate:"0 -20vh"}}>
-                    <div style={tabval==1 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(1)}>
-                        <h2><WorkHistory sx={sxProps}/>Experience</h2>
+            </div>
+            <div className={styles.noPar}>
+                <div className={styles.tabTitles}>
+                    <div>
+                        <div style={tabval==0 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(0)}>
+                            <h2><Handyman sx={sxProps}/><span>Skills</span></h2>
+                        </div>
                     </div>
-                </div>
-                <div ref={parallax3} style={{translate:"0 -10vh"}}>
-                    <div style={tabval==2 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(2)}>
-                        <h2><School sx={sxProps}/>Education</h2>
+                    <div>
+                        <div style={tabval==1 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(1)}>
+                            <h2><WorkHistory sx={sxProps}/><span>Experience</span></h2>
+                        </div>
+                    </div>
+                    <div>
+                        <div style={tabval==2 ? {backgroundColor:"#444444"} : null} onClick={(e)=>handleChange(2)}>
+                            <h2><School sx={sxProps}/><span>Education</span></h2>
+                        </div>
                     </div>
                 </div>
             </div>

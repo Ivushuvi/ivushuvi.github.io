@@ -1,6 +1,6 @@
 .tabTitles{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 50px;
 }
@@ -27,25 +27,19 @@
     transform: translateY(-10px);
 }
 
+.noPar{
+    display: none;
+}
+
 .content{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    /* align-items: center; */
     height: 100vh;
     margin-top: 30vh;
-    /* top: 0px;
-    opacity: var(--progress); */
 }
-
-/* .container{
-    height: 200vh;
-    display: flex;
-    flex-direction: column;
-    
-} */
 
 .tabContents{
     width: 40%;
@@ -70,4 +64,44 @@
     text-decoration: none;
     color: #fff;
     background: #ff004f;
+}
+
+@media screen and (max-height: 1000px) {
+    .noPar{
+        display: block;
+    }
+
+    .par{
+        display: none;
+    }
+
+    .content{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .tabTitles div div span{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tabTitles div div h2{
+        font-size: 20px;
+    }
+
+    .tabTitles{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .tabTitles div div h2{
+        font-size: 16px;
+    }
+
+    .tabTitles{
+        gap: 5px;
+    }
 }
