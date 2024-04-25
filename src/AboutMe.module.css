@@ -78,6 +78,28 @@ ul {
     opacity: var(--progress);
 }
 
+.noParContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.noPar{
+    display: none;
+}
+
 .filler{
     flex-grow: 1;
+}
+
+@media screen and (max-width: 700px), screen and (max-height: 800px) {
+    .noPar{
+        display: block;
+    }
+
+    .container{
+        display: none;
+    }
 }
